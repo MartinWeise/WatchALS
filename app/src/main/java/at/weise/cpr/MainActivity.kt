@@ -1,7 +1,9 @@
 package at.weise.cpr
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
+import android.view.View
 
 class MainActivity : WearableActivity() {
 
@@ -11,5 +13,11 @@ class MainActivity : WearableActivity() {
 
         // Enables Always-on
         setAmbientEnabled()
+    }
+
+    // Start CPR
+    fun startCpr(view: View) {
+        val intent = Intent(this, AlsActivity::class.java)
+        startActivity(intent)
     }
 }
