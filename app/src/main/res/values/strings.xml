@@ -7,4 +7,5 @@
     <string name="start">CPR Started</string>
     <string name="shockable">⚡</string>
     <string name="non_shockable">No Shock</string>
+    <string name="cpr_timer_prefix">CPR</string>
 </resources>

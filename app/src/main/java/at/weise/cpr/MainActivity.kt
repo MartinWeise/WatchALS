@@ -2,17 +2,14 @@ package at.weise.cpr
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.wearable.activity.WearableActivity
 import android.view.View
+import androidx.fragment.app.FragmentActivity
 
-class MainActivity : WearableActivity() {
+class MainActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // Enables Always-on
-        setAmbientEnabled()
     }
 
     // Start CPR

@@ -1,61 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.wear.widget.BoxInsetLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:background="@color/dark_grey"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        tools:deviceIds="wear"
-        android:padding="@dimen/box_inset_layout_padding">
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical"
-            android:background="@color/background">
-        <androidx.cardview.widget.CardView
-                android:layout_centerInParent="true"
-                android:layout_width="match_parent"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_height="wrap_content">
-            <LinearLayout
-                    android:orientation="vertical"
+    <data>
+        <variable name="cprModel" type="at.weise.cpr.data.CprModel"/>
+    </data>
+
+    <androidx.wear.widget.BoxInsetLayout
+            android:background="@color/dark_grey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"
+            tools:deviceIds="wear"
+            android:padding="@dimen/box_inset_layout_padding">
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="@color/background">
+            <androidx.cardview.widget.CardView
+                    android:layout_centerInParent="true"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                <TextView
-                        android:text="CPR 00:00"
-                        android:textSize="8pt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:id="@+id/timer"/>
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0pt"
+                    android:layout_height="wrap_content">
                 <LinearLayout
-                        android:gravity="center"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                    <Button
+                    <TextView
+                            android:text="@{cprModel.time}"
+                            android:textSize="8pt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:backgroundTint="@color/primary"
-                            android:id="@+id/shockable"
-                            android:text="@string/shockable"/>
-                    <Button
+                            android:layout_gravity="center"
+                            android:id="@+id/timer"/>
+                    <LinearLayout
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/primary"
+                                android:id="@+id/shockable"
+                                android:text="@string/shockable"/>
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/non_shockable"
+                                android:backgroundTint="@color/lightgray"
+                                android:text="@string/non_shockable"/>
+                    </LinearLayout>
+                    <TextView
+                            android:text="1x Adrenalin / 1x Amiodaron"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/non_shockable"
-                            android:backgroundTint="@color/lightgray"
-                            android:text="@string/non_shockable"/>
+                            android:layout_gravity="center"
+                            android:id="@+id/textView2"/>
                 </LinearLayout>
-                <TextView
-                        android:text="1x Adrenalin / 1x Amiodaron"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:id="@+id/textView2"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
-</androidx.wear.widget.BoxInsetLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.wear.widget.BoxInsetLayout>
+</layout>
