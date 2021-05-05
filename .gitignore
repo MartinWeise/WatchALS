@@ -1,5 +1,11 @@
 # IDE
 .idea/
+gradle/
+gradlew
+gradlew.bat
+
+# Release
+app/release/
 
 # Built application files
 *.apk
