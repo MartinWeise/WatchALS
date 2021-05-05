@@ -1,3 +1,5 @@
+![commits](https://badgen.net/github/commits/martinweise/watchals/) ![releases](https://badgen.net/github/releases/martinweise/watchals/) ![license](https://badgen.net/github/license/martinweise/watchals/)
+
 # Watch ALS
 
 Quickly log your actions while doing Advanced Life Support (ALS) on CPR with a fingertip -- all data is stored locally on your watch.
