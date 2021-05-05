@@ -1,8 +1,9 @@
 <resources>
     <color name="primary">#b71c1c</color>
     <color name="secondary">#fafafa</color>
-    <color name="yellow">#fbc02d</color>
-    <color name="green">#2e7d32</color>
+    <color name="adrenalin">#e6cee4</color>
+    <color name="amiodaron">#d5204c</color>
+    <color name="amiodaron2">#0094c7</color>
     <color name="lightgray">#bdbdbd</color>
     <color name="background">#212121</color>
 </resources>

@@ -2,10 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable name="cprModel" type="at.weise.cpr.data.CprModel"/>
-    </data>
-
     <androidx.wear.widget.BoxInsetLayout
             android:background="@color/dark_grey"
             android:layout_width="match_parent"
@@ -30,12 +26,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                     <TextView
-                            android:text="@{cprModel.time}"
                             android:textSize="8pt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:id="@+id/timer"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="invisible"
+                            android:id="@+id/cycles"/>
                     <LinearLayout
                             android:gravity="center"
                             android:orientation="horizontal"
@@ -46,20 +47,44 @@
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/primary"
                                 android:id="@+id/shockable"
+                                android:onClick="shock"
                                 android:text="@string/shockable"/>
                         <Button
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/non_shockable"
                                 android:backgroundTint="@color/lightgray"
+                                android:onClick="noShock"
                                 android:text="@string/non_shockable"/>
                     </LinearLayout>
+                    <LinearLayout
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/adrenalin"
+                                android:onClick="adrenalinApplied"
+                                android:backgroundTint="@color/adrenalin"
+                                android:textColor="@color/black"
+                                android:visibility="invisible"/>
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/amiodaron"
+                                android:onClick="amiodaronApplied"
+                                android:backgroundTint="@color/amiodaron2"
+                                android:textColor="@color/amiodaron"
+                                android:visibility="invisible"/>
+                    </LinearLayout>
                     <TextView
-                            android:text="1x Adrenalin / 1x Amiodaron"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:id="@+id/textView2"/>
+                            android:visibility="invisible"
+                            android:id="@+id/als"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
