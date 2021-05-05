@@ -75,7 +75,7 @@ class AlsActivity : FragmentActivity() {
             cprAls.visibility = View.VISIBLE
         }
         /* buttons */
-        if ((analyses - shocks) >= 3 && amiodaron != 3) {
+        if (shocks >= 3 && amiodaron != 3) {
             findViewById<Button>(R.id.amiodaron).visibility = View.VISIBLE
         }
         if (amiodaron == 3) {
