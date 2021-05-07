@@ -117,7 +117,7 @@ class AlsActivity : FragmentActivity() {
     private fun startTimer() {
         timer = fixedRateTimer(name = "CPR-Timer", initialDelay = 0, period = 1000) {
             ticks++
-            if (ticks != 0 && ticks % (60*2) == 0) {
+            if (ticks != 0 && ticks % (60*4) == 0) {
                 vibrate()
             }
             runOnUiThread {
@@ -127,7 +127,7 @@ class AlsActivity : FragmentActivity() {
     }
 
     private fun vibrate() {
-        vibrator.vibrate(VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE))
+        vibrator.vibrate(VibrationEffect.createOneShot(3000, VibrationEffect.DEFAULT_AMPLITUDE))
     }
 
     private fun formatTime(totalSeconds: Int): String {
