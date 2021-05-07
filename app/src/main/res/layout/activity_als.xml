@@ -3,7 +3,7 @@
         xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.wear.widget.BoxInsetLayout
-            android:background="@color/dark_grey"
+            android:background="@color/dark"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".MainActivity"
@@ -14,7 +14,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
-                android:background="@color/background">
+                android:background="@color/dark">
             <androidx.cardview.widget.CardView
                     android:layout_centerInParent="true"
                     android:layout_width="match_parent"
@@ -54,6 +54,7 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/non_shockable"
                                 android:backgroundTint="@color/lightgray"
+                                android:textColor="@color/dark"
                                 android:onClick="noShock"
                                 android:text="@string/non_shockable"/>
                     </LinearLayout>
@@ -84,7 +85,13 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:visibility="invisible"
-                            android:id="@+id/als"/>
+                            android:id="@+id/als_adrenaline"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="invisible"
+                            android:id="@+id/als_amiodarone"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </RelativeLayout>

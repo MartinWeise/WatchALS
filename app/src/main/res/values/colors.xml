@@ -5,5 +5,5 @@
     <color name="amiodaron">#d5204c</color>
     <color name="amiodaron2">#0094c7</color>
     <color name="lightgray">#bdbdbd</color>
-    <color name="background">#212121</color>
+    <color name="dark">#212121</color>
 </resources>
