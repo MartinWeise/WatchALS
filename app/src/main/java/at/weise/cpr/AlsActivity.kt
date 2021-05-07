@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.widget.Toast
 import android.view.View
 import android.widget.Button
 import android.text.Html
@@ -41,6 +42,11 @@ class AlsActivity : FragmentActivity() {
         findViewById<Button>(R.id.adrenalin).setText(Html.fromHtml("Adr.<sup>1mg</sup>"))
         /* start the counter */
         startTimer()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        stopTimer()
     }
 
     fun shock(view: View) {
@@ -111,7 +117,7 @@ class AlsActivity : FragmentActivity() {
     private fun startTimer() {
         timer = fixedRateTimer(name = "CPR-Timer", initialDelay = 0, period = 1000) {
             ticks++
-            if (ticks != 0 && ticks % (60*4) == 0) {
+            if (ticks != 0 && ticks % (60*2) == 0) {
                 vibrate()
             }
             runOnUiThread {

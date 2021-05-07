@@ -8,6 +8,7 @@
     <string name="shockable">Shock</string>
     <string name="non_shockable">No Shock</string>
     <!-- Kotlin -->
+    <string name="analyze">Analyze!</string>
     <string name="shock">shock</string>
     <string name="shock_multiple">shocks</string>
     <string name="cpr">CPR</string>
